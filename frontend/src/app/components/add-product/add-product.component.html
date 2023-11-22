@@ -1,5 +1,5 @@
-<form [formGroup]="editForm" class="max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
-    <h2 class="text-2xl font-semibold mb-4">Editar Producto</h2>
+<form [formGroup]="addForm" (submit)="onSubmit()" class="max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
+    <h2 class="text-2xl font-semibold mb-4">Agregar Producto</h2>
   
     <div class="mb-4">
       <label for="name" class="block text-gray-700 font-bold mb-2">Nombre</label>
@@ -22,7 +22,7 @@
     </div>
   
     <div class="flex justify-end">
-      <button type="submit" (click)="onSubmit()" class="bg-blue-500 text-white px-4 py-2 rounded-md">Guardar</button>
-      <button type="button" class="bg-gray-300 text-gray-700 ml-2 px-4 py-2 rounded-md">Cancelar</button>
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Guardar</button>
+      <button type="button" (click)="onCancel()" class="bg-gray-300 text-gray-700 ml-2 px-4 py-2 rounded-md">Cancelar</button>
     </div>
   </form>

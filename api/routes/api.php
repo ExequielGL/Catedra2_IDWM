@@ -19,3 +19,4 @@ Route::get('products',[ProductController::class, 'index'])->name('api.product.in
 Route::post('products',[ProductController::class, 'store'])->name('api.product.store');
 Route::put('products/{id}',[ProductController::class, 'update'])->name('api.product.update');
 Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('api.product.destroy');
+Route::get('products/{id}',[ProductController::class, 'show'])->name('api.product.show');

@@ -14,6 +14,17 @@ class ProductController extends Controller
         return response()->json($products);
     }
 
+    public function show($id)
+    {
+        $product = Product::find($id);
+
+        if (!$product) {
+            return response()->json(['error' => 'Producto no encontrado'], 404);
+        }
+
+        return response()->json($product, 200);
+    }
+
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
