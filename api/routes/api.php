@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('products',[ProductController::class, 'index'])->name('api.product.show');
+Route::post('products',[UserController::class, 'store'])->name('api.product.update');
+//Route::put('profile/edit/personal-data',[PersonalDataController::class, 'update'])->name('api.personal.update');
+//Route::put('profile/edit/interests',[InterestController::class, 'update'])->name('api.interests.update');
+//Route::put('profile/edit/frameworks',[FrameworkController::class, 'update'])->name('api.frameworks.update');
+//Route::put('profile/edit/social-network',[SocialNetworkController::class, 'update'])->name('api.social.update');
